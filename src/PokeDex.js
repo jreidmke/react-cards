@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { v4 as uuid } from "uuid";
 import axios from "axios";
 import PokemonSelect from "./PokemonSelect";
-import PokemonCard from "./PokemonCard";
+import PokemonCard from "./PokemonCard"; //I was rigtht! It imported here! OK. 
 import "./PokeDex.css";
 
 /* Renders a list of pokemon cards.
