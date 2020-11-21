@@ -7,8 +7,8 @@ import "./PlayingCardList.css";
 /* Renders a list of playing cards.
  * Can also add a new card at random. */
 function CardTable() {
-  const [cards, setCards] = useState([]);
-  const addCard = async () => {
+  const [cards, setCards] = useState([]);//empty card array
+  const addCard = async () => { //addCard method is super basic
     const response = await axios.get(
       "https://deckofcardsapi.com/api/deck/new/draw/"
     );
@@ -18,10 +18,10 @@ function CardTable() {
     <div className="PlayingCardList">
       <h3>Pick a card, any card!</h3>
       <div>
-        <button onClick={addCard}>Add a playing card!</button>
+        <button onClick={addCard}>Add a playing card!</button> {/**this calls that addCard function */}
       </div>
       <div className="PlayingCardList-card-area">
-        {cards.map(cardData => (
+        {cards.map(cardData => ( //again, cards mapped in render return. very cool. 
           <PlayingCard key={cardData.id} front={cardData.cards[0].image} />
         ))}
       </div>

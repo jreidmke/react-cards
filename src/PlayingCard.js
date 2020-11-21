@@ -3,9 +3,9 @@ import backOfCard from "./back.png";
 import "./PlayingCard.css"
 
 /* Renders a single playing card. */
-function PlayingCard({ front, back = backOfCard }) {
+function PlayingCard({ front, back = backOfCard }) { //pretty simple stuff. props declared and back defaults to backOfCard (which is an imported image)
   const [isFacingUp, setIsFacingUp] = useState(true);
-  const flipCard = () => {
+  const flipCard = () => { //same method used in PokemonCard.js! i'm betting they will have us abstrat this. 
     setIsFacingUp(isUp => !isUp);
   };
   return (
