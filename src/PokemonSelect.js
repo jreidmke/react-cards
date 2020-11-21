@@ -3,10 +3,10 @@ import pokemonList from "./pokemonList";
 import { choice } from "./helpers";
 
 /* Select element to choose from common pokemon. */
-function PokemonSelect({ add, pokemon = pokemonList }) {
-  const [pokeIdx, setPokeIdx] = useState(0);
-  const handleChange = evt => {
-    setPokeIdx(evt.target.value);
+function PokemonSelect({ add, pokemon = pokemonList })//notice that the props have been set and pokemon has a defaultProp of pokemonList imported above {
+  const [pokeIdx, setPokeIdx] = useState(0);//first the pokeIdx is set to 0. let's see where this comes in handy.
+  const handleChange = evt => {//pretty basic handleChange function right here.
+    setPokeIdx(evt.target.value);//sets the pokeIdx state to whatever the value returned from the select form is.
   };
 
   return (
